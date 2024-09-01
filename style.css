@@ -1,0 +1,137 @@
+:root{
+    --font: "Kumbh Sans", sans-serif;
+    /* Primary*/
+
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+    /*Neutral*/
+
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html{
+    font-size: 18px;
+    font-family: var(--font);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--Dark-cyan);
+
+}
+.main::before{
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/bg-pattern-top.svg);
+    position: absolute;
+    z-index: 0;
+    background-size:100%  100% ;
+    top:-50% ;
+    right:50% ;
+    background-repeat: no-repeat;
+}
+.main::after{
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/bg-pattern-bottom.svg);
+    position: absolute;
+    z-index: 0;
+    background-size:100%  100% ;
+    top:50%  ;
+    left: 50%;
+    background-repeat: no-repeat;
+}
+
+.tarjeta{
+    background-image: url(images/bg-pattern-card.svg) ;
+    position: relative;
+    background-size: top;
+    background-repeat: no-repeat;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    width: 100%;
+    align-items: center;
+    height: auto;
+    padding-bottom: 1.5rem;
+    border-radius: 1rem;
+    z-index: 2;
+}
+.tarjeta__name{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    
+}   
+.name__image{
+    border-radius: 50%;
+    border: 5px solid white;
+    img{
+        border-radius: inherit;
+    }
+}
+.name__nombre{
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    
+}
+.nombre--victor{
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.nombre--edad{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--Dark-gray);
+}
+
+.name__lugar{
+    color: var(--Dark-grayish-blue);
+    margin-top: 0.5rem; 
+}
+
+.tarjeta__seguidores{
+    display: flex;
+    margin-top: 2.5rem;
+    width: 80%;
+    
+    justify-content: space-between;
+}
+.seguidores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--Very-dark-desaturated-blue);
+    font-weight: 700;
+    gap: 0.2rem;
+}
+.seguidores span{
+    font-weight: 400;
+    color: var(--Dark-grayish-blue);
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
